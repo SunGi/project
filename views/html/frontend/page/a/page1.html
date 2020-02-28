@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Full page scroll</title>
+	<link rel="stylesheet" type="text/css" href="css/full-page-scroll.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/scroll-mouse.css">
+	<link rel="stylesheet" type="text/css" href="css/button.css">
+	<link rel="stylesheet" type="text/css" href="css/film.css">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<style type="text/css">
+
+
+.animated {
+  animation-duration: 1.2s;
+  animation-fill-mode: both;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-50px);}
+  60% {transform: translateY(-35px);}
+}
+.bounce {
+  animation-name: bounce;
+}
+
+
+@keyframes greenblue
+{
+    0% { background-color: #0c056d; }
+    20% { background-color: #590d82; }
+    35% { background-color: #9e579d; }
+    50%{ background-color: #0c056d; }
+    75% { background-color: #9e579d; }
+    90%{ background-color: #590d82; }
+	100% { background-color: #0c056d; }
+
+}
+
+	img { 
+		position: relative;
+		top:50%;
+		margin-bottom: 20px;
+	}
+	.section1 {
+		background-color: #462664;
+			}
+
+	span {
+		font-size: 50px;
+		font-style: normal;
+		color: #fff;
+		font-family: 'Bebas Neue';
+	}
+	input{
+		border-radius: 2px;
+		width:300px;
+		height:60px;
+	}
+	input::placeholder{
+		text-align: center;
+  		font-family: 'Arial Black', cursive;
+
+	}
+	fieldset{
+
+	width:400px;
+	height:200px;
+	background-color: #e7ded7;
+
+	}
+	.section1 div{
+		text-align: center;
+		position: relative;
+	  	top:18%;
+	  	margin-bottom: 15px;
+	}
+	input:focus {
+		outline:2px solid #462664;
+	}
+
+
+</style>	
+</head>
+<body>
+	<div style="width: 100%; height:100%; position:absolute; animation: greenblue 25s infinite;"></div>
+	<div id="main" class="scroll-container">
+		<section class="section1">
+			  <div class="text animated bounce"><img src="https://i.postimg.cc/Px26ScT6/image.png" width="410px"></div>
+			  <form action="/waiting" method="post">
+			<div>
+				<input type="text" name="name" placeholder="Enter The Name" style="text-align: center; font-family: 'Arial Black'; font-size: 28px;">
+			</div>
+			<div>
+				<input type="submit" value="Enter" style="background-color: #222222; border-style: none; width: 280px; font-family: Arial Black; font-size: 21px; color: white; ">
+			</div>
+		</form>
+		</section>
+
+	</div>
+</body>
+</html>

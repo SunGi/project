@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>list</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+   <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
+	<style type="text/css">
+    html{
+      background-color: rgb(79,35,144);
+    }
+    *{
+      box-sizing: border-box;
+    }
+    div.cardContainer{
+      width: 350px;
+      display: inline-block;
+      margin-top: 100px;
+    }
+
+    div.cardContainer div{
+      height: inherit;
+      width: inherit;
+      color: #FFF;
+      font-size: 24px;
+      backface-visibility: hidden;
+      -webkit-backface-visibility:hidden;
+      transition: all 1.5s;
+      -webkit-transition:all 1.5s;
+      -moz-transition:all 1.5s;
+      -o-transition:all 1.5s;
+      padding-top: 80px;
+      text-align: center;
+    }
+    .pl{
+      background-color:rgb(71,12,141);
+    }
+    .p{
+      background-color:  rgb(54,0,126);
+    }
+    div.cardContainer div:last-child{
+      position: relative;
+      top: -400px;
+      transform: rotateY(180deg);
+      -webkit-transform:rotateY(180deg);
+      -ms-transform:rotateY(180deg);
+      -moz-transform:rotateY(180deg);
+      -o-transform:rotateY(180deg);
+    }
+    div.cardContainer:hover div:first-child{
+      transform: rotateY(-180deg);
+      -webkit-transform:rotateY(-180deg);
+      -ms-transform:rotateY(-180deg);
+      -moz-transform:rotateY(-180deg);
+      -o-transform:rotateY(-180deg);
+    }
+    div.cardContainer:hover div:last-child{
+      transform: rotateY(0deg);
+      -webkit-transform:rotateY(0deg);
+      -ms-transform:rotateY(0deg);
+      -moz-transform:rotateY(0deg);
+      -o-transform:rotateY(0deg);
+    }
+    span{
+      color: white;
+      font-size: 60px;
+      font-family: 'Arial-Black';
+      position: relative;
+      top: 50px;
+
+      
+    }
+	</style>	
+</head>
+<body>
+  <center>
+  <div>
+  <span>Ranking</span>
+</div>
+   <div class="cardContainer">
+    <div class="pl" style="height:350px";>
+      <img src="https://i.postimg.cc/rsS6zN61/medal-1.png" style="width: 100px; position: relative; top: -60px;"><br>
+      <i>50</i><a> points</a>  
+    </div>
+    <div class="pl" style="height:350px; position:relative; top:-350px;"><%=user[1].name%><br><%=user[1].score%></div>
+  </div>
+  <div class="cardContainer">
+    <div class="p" style="height: 500px;">
+      <img src="https://i.postimg.cc/Vv0TpBLy/medal-2.png" style="width: 100px; position: relative; top: -60px;"><br>
+      <i>100</i><a> points</a> 
+    </div>
+    <div class="p" style="height:500px; position:relative; top:-500px;"><%=user[0].name%><br><%=user[0].score%></div>
+  </div>
+  <div class="cardContainer">
+    <div class="pl" style="height:250px";>
+      <img src="https://i.postimg.cc/jqhZqFm8/medal-3.png" style="width: 100px; position: relative; top: -60px;"><br>  
+      <i>20</i><a> points</a> 
+    </div>
+    <div class="pl" style="height:250px; position:relative; top:-250px;"><%=user[2].name%><br><%=user[2].score%></div>
+  </div>
+  </center>
+</body>
+</html>
