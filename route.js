@@ -16,7 +16,9 @@ router.get('/', (req, res)=>{
     res.render('./html/frontend/page/a/page1.html');
 });
 router.get('/waiting', (req, res)=>{
-    res.render('./html/frontend/page/page2/wait.html');
+    res.render('./html/frontend/page/page2/adminfake.html',{
+        name1:name1
+    });
 })
 router.post('/waiting', (req,res)=>{
     if(req.body.name=='admin'){
@@ -67,6 +69,9 @@ router.post('/morewait2',(req,res)=>{
 })
 router.get('/admingame',(req,res)=>{
     res.render('./html/frontend/page/page4/quiz.html');
+});
+router.get('/adquiz',(req,res)=>{
+    res.render('./html/frontend/page/page3/quizpagead.html');
 });
 router.get('/ranking',(req,res)=>{
     db.query('select * from manage order by score desc', (err, results,fields) =>{
