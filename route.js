@@ -19,9 +19,16 @@ router.get('/waiting', (req, res)=>{
     res.render('./html/frontend/page/page2/wait.html');
 })
 router.post('/waiting', (req,res)=>{
-    res.render('./html/frontend/page/page2/wait.html',{
+    if(req.body.name=='admin'){
+        res.render('./html/frontend/page/page2/admin.html',{
+            name1:req.body.name
+        });
+    }
+    else{
+    res.render('./html/frontend/page/page2/student.html',{
         name1 : req.body.name
     });
+}
     name1=req.body.name;
     db.query('insert into manage (name, score) values (?, ?)',[name1, 10]);
     db.query('select * from manage where name=?', [name1],(err, results) =>{
@@ -33,22 +40,16 @@ router.post('/waiting', (req,res)=>{
         }
         console.log(req.session.user);
     });
-    MaximumUser=MaximumUser+1;
-    console.log('MaximumUser :', MaximumUser);
+    //MaximumUser=MaximumUser+1;
+    //console.log('MaximumUser :', MaximumUser); 
 });
 router.get('/morewait', (req,res)=>{
     res.render('../morewait.html');
-    ConnectUser=ConnectUser+1;
-    console.log('ConnectUser :', ConnectUser);
+   // ConnectUser=ConnectUser+1;
+   //console.log('ConnectUser :', ConnectUser);
 })
 router.get('/gamestart', (req,res)=>{
-    if(ConnectUser==MaximumUser){
         res.render('./html/frontend/page/page3/quizpage.html');
-    }
-    else{
-        res.send(`<script>alert("대기하지 않은 유저가 있습니다~~");location.href='/morewait';</script>`);
-        ConnectUser=ConnectUser-1;
-    }
 });
 router.get('/quizgame',(req,res)=>{
     res.render('./html/frontend/page/page4/quizst.html')
