@@ -227,19 +227,17 @@ a:hover{
          </span>
          
 		   <span class="slice" id="three">
-		   </span>
-
+         </span>
+         <form action="/morewait" method="post">
+            <input type="submit" name="asdf" vaule="1" class="share btn">
+            </form>
 		</div>
       </center>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="/socket.io/socket.io.js"></script>
         <script>
-           var socket=io();
-           socket.on('event_name', (msg)=>{
-            if(msg=='1'){
-              window.location.href='/gamestart';
-            }
-          })
+        var socket=io();
+           window.location.href='/adquiz';
         </script>
 </body>
 </html>
