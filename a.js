@@ -21,11 +21,11 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 app.use(route);
+app.post('/morewait',(req,res)=>{
+    msg=1;
+    res.redirect('/waiting');
+})
 app.post('/admingame',(req,res)=>{
-    console.log(req.body.asdf);
-    if(req.body.asdf=='제출'){
-        msg=1;
-    }
     res.render('./html/frontend/page/page4/quiz.html');
 });
 server.listen(3000, console.log('서버가 열림!'));
