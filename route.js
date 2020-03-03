@@ -58,7 +58,7 @@ router.get('/quizgame',(req,res)=>{
 })
 router.post('/morewait2',(req,res)=>{
     var ans=req.body.ans;
-    var ANS=1;
+    var ANS='영상교육관';
     var score=100;
     res.render('../morewait2.html')
     if(ans==ANS){
