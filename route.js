@@ -6,9 +6,7 @@ const db =require('./db/connection');
 var app=express();
 const router = express.Router();
 
-var MaximumUser=0;
 var flag=0;
-var ConnectUser=0;
 var name1;
 var mysco;
 
@@ -42,13 +40,9 @@ router.post('/waiting', (req,res)=>{
         }
         console.log(req.session.user);
     });
-    //MaximumUser=MaximumUser+1;
-    //console.log('MaximumUser :', MaximumUser); 
 });
 router.get('/morewait', (req,res)=>{
     res.render('../morewait.html');
-   // ConnectUser=ConnectUser+1;
-   //console.log('ConnectUser :', ConnectUser);
 })
 router.get('/gamestart', (req,res)=>{
         res.render('./html/frontend/page/page3/quizpage.html');
