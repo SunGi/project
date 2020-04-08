@@ -26,21 +26,14 @@
 </head>
 <body>
    <span> <%=num[0].exam%> </span>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-   <script src="/socket.io/socket.io.js"></script>
-     <script>
-        var socket=io();
-        var cnt;
-        socket.on('location', (data)=>{
-           console.log(data);
-           cnt=data+1;
-           socket.emit('respond', cnt);
-         if(data>0){
-            setTimeout(()=>{
-               window.location.href='/quizgame';
-            },5000);
-         }
-       })
-     </script>
 </body>
+<script>
+    function location(){
+        var cnt=0;
+        cnt++;
+        if(cnt==1){
+            window.location.href='/asdf'
+        }
+    }
+</script>
 </html>

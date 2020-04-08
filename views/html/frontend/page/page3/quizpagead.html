@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-<meta http-equiv="refresh" content="5;url=/admingame">
+<!--<meta http-equiv="refresh" content="5;url=/admingame">-->
 <html>
 <head>
 	<title>page2</title>
@@ -26,6 +26,22 @@
    </style>	
 </head>
 <body>
-   <span> Q. 선린 인터넷고등학교에서 가장 오래된 건물은? </span> 
+   <span> <%=num[0].exam%> </span> 
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="/socket.io/socket.io.js"></script>
+     <script>
+        var socket=io();
+        var cnt;
+        socket.on('location', (data)=>{
+           console.log(data);
+           cnt=data+1;
+           socket.emit('respond2', cnt);
+         if(data>0){
+            setTimeout(()=>{
+               window.location.href='/admingame';
+            },5000);
+         }
+       })
+     </script>
 </body>
 </html>

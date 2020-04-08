@@ -40,32 +40,41 @@
         right: 5%;
         top: 30%;
         }
-   </style>   
+				i{
+					color: white;
+					font-family: 'Do Hyeon', sans-serif;
+					font-size: 35px;
+				}
+   </style>
 </head>
 <body>
    <header>
     <center>
-     <a>Q. 여기에 문제가 다시 나온다!</a>
+     <a><%=num[0].exam%></a>
      <hr>
     </center>
    </header>
    <section>
     <center>
-     <img src="https://cdn.pixabay.com/photo/2016/03/27/18/54/technology-1283624_1280.jpg" alt="문제 관련 이미지" style="width: 500px; ">
+     <img src="https://cdn.pixabay.com/photo/2016/03/27/18/54/technology-1283624_1280.jpg" alt="문제 관련 이미지" style="height: 250px; ">
      </center>
      <div class="timer">
-      <a href="#" class="button">Next</a>
+      <a href="/adquiz" class="button">Next</a>
      </div>
      <div id="se">
-      <input type="button" value="1. 1호관" style="background-color: rgb(215,0,46); border-style: none; width: 46%; height: 120px;font-family: Arial Black; font-size: 30px; color: white; margin-left: 3.2%; margin-top: 25px; text-align: center;">
-      <input type="button" value="2. 영상교육관" style="background-color: rgb(16,79,161); border-style: none; width: 46%; height: 120px;font-family: Arial Black; font-size: 30px; color: white; margin-right: : 5%; margin-top: 25px; text-align: center; margin-left: 10px;"><br>
-      <input type="button" value="3. 체육관" style="background-color: rgb(206,139,6); border-style: none; width: 46%; height: 120px;font-family: Arial Black; font-size: 30px; color: white; margin-left: 3.2%; margin-top: 10px; text-align: center;">
-      <input type="button" value="4. 폴리에스테르 수지 콘크리트 관" style="background-color: rgb(35,127,11); border-style: none; width: 46%; height: 120px;font-family: Arial Black; font-size: 30px; color: white; margin-right: : 5%; margin-top: 10px; text-align: center; margin-left: 10px;">
-     </div>
+			 <section style="background-color: rgb(215,0,46); text-align: center; border-style: none; width: 47%; height: 120px;font-family: Arial Black; font-size: 30px; color: white; margin-left: 3%; margin-top: 15px; float: left;">
+			 <i><br><%=example[0].ex1%></i></section>
+      <section style="background-color: rgb(16,79,161); text-align: center; border-style: none; width: 47%; height: 120px;font-family: Arial Black; font-size: 30px; color: white; margin-right: :5%; margin-top: 15px;margin-left: 10px; float: left;"><br>
+				<i><%=example[0].ex2%></i></section>
+			<section style="background-color: rgb(206,139,6); text-align: center; border-style: none; width: 47%; height: 120px;font-family: Arial Black; font-size: 30px; color: white; margin-left: 3%; margin-top: 10px; float: left;">
+				<i><br><%=example[0].ex3%></i></section>
+			<section style="background-color: rgb(35,127,11); text-align: center; border-style: none; width: 47%; height: 120px;font-family: Arial Black; font-size: 30px; color: white; margin-right: : 5%; margin-top: 10px; margin-left: 10px; float:left;">
+				<i><br><%=example[0].ex4%></i></section>
+		 </div>
    </section>
    <footer>
-     <div id="footer" style="position: absolute; left: 0; bottom: 0; width: 100%; padding: 15px 0; background-color: #222222;">
-       
+     <div id="footer" style="position: fixed; margin-top: 20px; float: bottom; left: 0; bottom: 0; width: 100%; padding: 15px 0; background-color: #222222;">
+
      </div>
    </footer>
 </body>
